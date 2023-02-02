@@ -11,12 +11,6 @@
 a {
 	text-decoration: none;
 	color: inherit;
-
-	&:visited,
-	&:focus,
-	&:hover {
-		color: inherit;
-	}
 }
 
 ul,
@@ -68,6 +62,5 @@ button:active {
 
 html,
 body {
-	height: 100%;
 	line-height: 1;
 }

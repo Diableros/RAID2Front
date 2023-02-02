@@ -1,9 +1,15 @@
 .wrapper {
-	width: 100vw;
-	height: 100vh;
+	// max-width: 380px;
+	// min-width: 320px;
+	width: 420px;
+
+	margin: 0 auto;
+	padding: 40px 20px;
+
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	font-size: 3rem;
+
+	background-color: #fff;
 }
