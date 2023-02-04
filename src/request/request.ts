@@ -1,20 +1,10 @@
-const BASE_API_URL = 'https://api.npoint.io/75ade590abcb9573ac3f';
+const BASE_API_URL = 'https://vladislavrusin.pythonanywhere.com/';
 
-export enum ReqType {
-	All = 'All',
-}
-
-const request = (reqType: ReqType, callback: (data: PlaceType[]) => void) => {
-	fetch(BASE_API_URL)
+const request = (params: string, callback: (data: PlaceType[]) => void) => {
+	fetch(BASE_API_URL + params)
 		.then((res) => res.json())
 		.then((data) => {
-			switch (reqType) {
-				case ReqType.All:
-					callback(data);
-					break;
-				default:
-					return null;
-			}
+			callback(data);
 		});
 };
 

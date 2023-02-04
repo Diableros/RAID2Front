@@ -12,6 +12,10 @@ const AppRouter = ({ children }: { children: ReactNode }) => {
 					path: '/',
 					element: <MainScreen />,
 				},
+				{
+					path: '/filter',
+					element: <MainScreen />,
+				},
 			],
 		},
 	]);

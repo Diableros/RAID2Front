@@ -1,12 +1,14 @@
 import PlaceCard from '../place-card/PlaceCard';
 import s from './PlaceCards.module.scss';
 
-const PlaceCards = ({ places }: { places: PlaceType[] }) => {
+const PlaceCards = ({ places }: { places: PlaceType[] | null }) => {
 	return (
 		<main className={s.main}>
-			{places.length
+			{places === null
+				? 'Загружаем данные...'
+				: places.length
 				? places.map((place) => <PlaceCard place={place} key={place.pk} />)
-				: 'Загружаем данные...'}
+				: 'Нет результатов по заданному фильтру!'}
 		</main>
 	);
 };

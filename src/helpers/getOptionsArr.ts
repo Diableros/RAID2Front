@@ -1,4 +1,4 @@
-export const getOptionsArr = (places: PlaceType[]): OptionType[] => {
+export const getOptionsArr = (places: PlaceType[]): OptionType[] | [] => {
 	const result: OptionType[] = [];
 	const duplicatesIndices: number[] = [];
 
