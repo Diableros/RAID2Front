@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<div className={s.footer}>
 			<Logo />
-			<p className={s.footer__year}>© 2022</p>
+			<p className={s.footer__year}>© 2023</p>
 		</div>
 	);
 };

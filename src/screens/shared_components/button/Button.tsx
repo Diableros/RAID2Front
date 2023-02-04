@@ -9,7 +9,7 @@ const Button = ({ title, action }: PropsType) => {
 	const handleOnClick = (): void => {
 		if (action) action();
 
-		console.log(`btnclck: ${title}`);
+		// console.log(`btnclck: ${title}`);
 	};
 
 	return (

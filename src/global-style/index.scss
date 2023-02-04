@@ -9,6 +9,8 @@ html {
 :root {
 	--light-gray: #d9d9d9;
 
+	--light-gray-2: #d7d7d7;
+
 	--dark-gray: #727883;
 
 	--dark-black: rgba(0, 0, 0, 0.8);
@@ -19,7 +21,7 @@ html {
 body {
 	font-family: Roboto, Arial;
 	color: var(--dark-black);
-	background-color: #eee;
+	background-color: #e5e5e5;
 }
 
 input[type='number']::-webkit-outer-spin-button,

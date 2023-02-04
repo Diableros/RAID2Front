@@ -1,7 +1,13 @@
-import s from './DetailScreen.module.scss';
+import DetailHeader from './components/detail-header/DetailHeader';
+import DetailPlaceCard from './components/detail-place-card/DetailPlaceCard';
 
 const DetailScreen = () => {
-	return <div>Главный экран с краткими карточками</div>;
+	return (
+		<>
+			<DetailHeader />
+			<DetailPlaceCard />
+		</>
+	);
 };
 
 export default DetailScreen;

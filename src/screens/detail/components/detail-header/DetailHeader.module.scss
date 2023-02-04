@@ -1,0 +1,11 @@
+.header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 55px;
+	gap: 19px;
+	justify-items: start;
+	&__back {
+		cursor: pointer;
+	}
+}
