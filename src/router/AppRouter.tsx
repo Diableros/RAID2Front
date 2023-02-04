@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import DetailScreen from 'screens/detail/DetailScreen';
 import MainScreen from 'screens/main/MainScreen';
 
 const AppRouter = ({ children }: { children: ReactNode }) => {
@@ -13,8 +14,8 @@ const AppRouter = ({ children }: { children: ReactNode }) => {
 					element: <MainScreen />,
 				},
 				{
-					path: '/filter',
-					element: <MainScreen />,
+					path: '/details/:pk',
+					element: <DetailScreen />,
 				},
 			],
 		},

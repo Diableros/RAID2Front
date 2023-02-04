@@ -30,6 +30,7 @@ const FilterForm = ({ options }: { options: OptionType[] }) => {
 				<option value="0" disabled hidden>
 					Страна и город
 				</option>
+				<option value="0">Без фильтра по городу</option>
 				{options.map((place) => (
 					<option
 						key={place.city}

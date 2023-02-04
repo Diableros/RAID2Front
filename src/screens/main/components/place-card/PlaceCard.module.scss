@@ -12,11 +12,17 @@
 
 	&__location {
 		padding-bottom: 17px;
+		font-weight: 500;
 	}
 
 	&__description {
 		line-height: 26px;
 		color: #888;
 		padding-bottom: 28px;
+		text-align: justify;
+	}
+
+	&__price {
+		font-weight: 500;
 	}
 }
