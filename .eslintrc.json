@@ -13,9 +13,10 @@
 	"rules": {
 		"no-console": "warn",
 		"prettier/prettier": "error",
-		"camelcase": ["error"],
+		"camelcase": ["warn"],
 		"eqeqeq": ["error", "always"],
-		"no-unused-vars": "off"
+		"no-unused-vars": "off",
+		"no-undef": "off"
 	},
 	"root": true
 }

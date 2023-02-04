@@ -1,0 +1,22 @@
+.placeCard {
+	width: 100%;
+	font-size: 18px;
+
+	&__img {
+		height: 380px;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		margin-bottom: 25px;
+	}
+
+	&__location {
+		padding-bottom: 17px;
+	}
+
+	&__description {
+		line-height: 26px;
+		color: #888;
+		padding-bottom: 28px;
+	}
+}

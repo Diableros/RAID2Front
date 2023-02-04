@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,regular,700);
+@import 'reset';
+
+html {
+	font-size: 16px;
+}
+
+:root {
+	--light-gray: #d9d9d9;
+
+	--dark-gray: #727883;
+
+	--dark-black: rgba(0, 0, 0, 0.8);
+
+	--corner-radius: 4px;
+}
+
+body {
+	font-family: Roboto, Arial;
+	color: var(--dark-black);
+	background-color: #eee;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
