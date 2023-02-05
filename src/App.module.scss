@@ -16,3 +16,20 @@
 
 	border-radius: 10px;
 }
+
+.upButton {
+	cursor: pointer;
+	width: 60px;
+	position: fixed;
+	bottom: -70px;
+	right: calc(100vw / 2);
+	translate: calc(220px - 3rem) 0;
+	transition: 0.2s all ease-in-out;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}
+
+.showButton {
+	bottom: 40px;
+	transition: 0.2s all ease-in-out;
+}

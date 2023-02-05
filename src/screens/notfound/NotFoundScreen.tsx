@@ -8,7 +8,7 @@ const NotFoundScreen = () => {
 			<div className={s.wrapper}>
 				<h1 className={s.title}>404</h1>
 				<div className={s.text}>Запрашиваемая страница не найдена.</div>
-				<p>Пойти на главную:</p>
+				<p>Пойти на главную</p>
 				<Logo />
 			</div>
 		</div>
