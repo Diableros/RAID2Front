@@ -1,4 +1,3 @@
-import App from 'App';
 import { ReactNode } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AboutScreen } from 'screens/about/AboutScreen';
@@ -26,6 +25,10 @@ const AppRouter = ({ children }: { children: ReactNode }) => {
 				},
 			],
 			errorElement: <NotFoundScreen />,
+		},
+		{
+			path: '/404',
+			element: <NotFoundScreen />,
 		},
 	]);
 
