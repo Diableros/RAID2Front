@@ -1,0 +1,30 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 50vh;
+	justify-self: center;
+}
+
+.title {
+	font-size: 200px;
+	font-weight: 700;
+	font-family: 'Roboto Condensed', Arial;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 32px;
+	background: linear-gradient(rgba(#fff, 90%) 20%, rgba(#fff, 50%) 100%),
+		url('https://static.tildacdn.com/tild3366-3237-4434-a266-326662373538/favicon_1.ico');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

@@ -1,14 +1,15 @@
 .wrapper {
-	// max-width: 380px;
-	// min-width: 320px;
-	width: 420px;
+	max-width: 420px;
+	min-width: 320px;
+	min-height: calc(100vh - 40px);
+	// width: 420px;
 
 	margin: 20px auto;
 	padding: 40px 20px;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 
 	background-color: #fff;

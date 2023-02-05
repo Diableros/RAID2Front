@@ -49,7 +49,12 @@ const DetailPlaceCard = () => {
 					<p className={s.contactsInfo}>{place.host_name}</p>
 
 					<p className={s.contactsTitle}>Телефон</p>
-					<p className={s.contactsInfo}>{place.host_phone}</p>
+					<a
+						className={s.contactsInfo}
+						href={`tel:${place.host_phone.split('-').join('')}`}
+					>
+						{place.host_phone}
+					</a>
 
 					<p className={s.contactsTitle}>Адрес</p>
 					<p className={s.contactsInfo}>{place.host_location}</p>
