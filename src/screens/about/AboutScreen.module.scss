@@ -16,3 +16,25 @@
 	background-position: center;
 	background-size: cover;
 }
+
+.creds {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&__name {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__title {
+		font-size: 64px;
+		font-weight: 700;
+		font-family: 'Roboto condensed', Arial;
+	}
+
+	&__subtitle {
+		font-size: 32px;
+		font-weight: 900;
+	}
+}
