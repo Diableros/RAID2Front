@@ -1,17 +1,35 @@
 .wrapper {
-	// max-width: 380px;
-	// min-width: 320px;
-	width: 420px;
+	max-width: 420px;
+	min-width: 320px;
+	min-height: calc(100vh - 40px);
+	// width: 420px;
 
 	margin: 20px auto;
 	padding: 40px 20px;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 
 	background-color: #fff;
 
 	border-radius: 10px;
+}
+
+.upButton {
+	cursor: pointer;
+	width: 60px;
+	position: fixed;
+	bottom: -70px;
+	right: calc(100vw / 2);
+	translate: calc(220px - 3rem) 0;
+	transition: 0.2s all ease-in-out;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}
+
+.showButton {
+	bottom: 40px;
+	transition: 0.2s all ease-in-out;
 }

@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Button from 'screens/shared_components/button/Button';
 import s from './FilterForm.module.scss';
 

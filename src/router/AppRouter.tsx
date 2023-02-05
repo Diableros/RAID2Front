@@ -1,7 +1,10 @@
+import App from 'App';
 import { ReactNode } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { AboutScreen } from 'screens/about/AboutScreen';
 import DetailScreen from 'screens/detail/DetailScreen';
 import MainScreen from 'screens/main/MainScreen';
+import { NotFoundScreen } from 'screens/notfound/NotFoundScreen';
 
 const AppRouter = ({ children }: { children: ReactNode }) => {
 	const router = createBrowserRouter([
@@ -14,10 +17,15 @@ const AppRouter = ({ children }: { children: ReactNode }) => {
 					element: <MainScreen />,
 				},
 				{
-					path: '/details/:pk',
+					path: 'details/:pk',
 					element: <DetailScreen />,
 				},
+				{
+					path: 'about',
+					element: <AboutScreen />,
+				},
 			],
+			errorElement: <NotFoundScreen />,
 		},
 	]);
 

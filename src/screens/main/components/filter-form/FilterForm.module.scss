@@ -16,6 +16,10 @@
 		appearance: none;
 		background: url('../../../../img/arrow.svg') no-repeat;
 		background-position: 93% 50%;
+
+		&:focus {
+			background: var(--light-gray-2);
+		}
 	}
 
 	&__priceBox {
@@ -29,8 +33,13 @@
 		border: 1px solid var(--light-gray);
 		border-radius: var(--corner-radius);
 		font-size: 18px;
+
 		&::placeholder {
 			color: var(--light-gray);
+		}
+
+		&:focus {
+			background: var(--light-gray-2);
 		}
 	}
 }
