@@ -24,10 +24,9 @@ const AppRouter = ({ children }: { children: ReactNode }) => {
 					element: <AboutScreen />,
 				},
 			],
-			errorElement: <NotFoundScreen />,
 		},
 		{
-			path: '/404',
+			path: '/*',
 			element: <NotFoundScreen />,
 		},
 	]);
