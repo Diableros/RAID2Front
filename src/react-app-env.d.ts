@@ -15,4 +15,4 @@ type PlaceType = {
 	title: string;
 };
 
-type OptionType = Pick<PlaceType, 'country' | 'city'>;
+type OptionType = string;

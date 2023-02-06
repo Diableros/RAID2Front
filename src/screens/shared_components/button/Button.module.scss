@@ -5,4 +5,7 @@
 	font-weight: 500;
 	padding: 16px;
 	border-radius: var(--corner-radius);
+	&:active {
+		background: #c5c2c2;
+	}
 }
