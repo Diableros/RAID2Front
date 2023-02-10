@@ -11,6 +11,8 @@ const FilterForm = ({ options }: { options: OptionType[] }) => {
 	const [selectInputValue, setSelectInputValue] =
 		useState<string>('Страна и город');
 
+	console.log(params.toString());
+
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
 

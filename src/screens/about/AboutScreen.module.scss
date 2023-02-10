@@ -5,7 +5,10 @@
 }
 
 .aboutBlock {
-	height: 100%;
+	display: flex;
+	align-items: center;
+	min-height: 260px;
+	margin: 32px 0;
 	font-size: 22px;
 	font-weight: 500;
 	text-align: justify;
