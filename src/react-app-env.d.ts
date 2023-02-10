@@ -15,4 +15,4 @@ type PlaceType = {
 	title: string;
 };
 
-type OptionType = string;
+type OptionType = { country: string; city: string };

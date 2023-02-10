@@ -9,7 +9,7 @@ const MainScreen = () => {
 	const [dataPlaces, setDataPlaces] = useState<PlaceType[] | null>(null);
 	const [params, setParams] = useSearchParams();
 
-	let request: string = 'places/?';
+	let request: string = '?';
 	if (params.has('city') && params.get('city') !== '0')
 		request += 'city=' + params.get('city');
 	if (params.has('from') && params.get('from') !== '0')

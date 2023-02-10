@@ -1,17 +1,24 @@
 import clsx from 'clsx';
-import { FormEvent, useState, useLayoutEffect } from 'react';
+import { FormEvent, useState, useLayoutEffect, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Button from 'screens/shared_components/button/Button';
 import s from './FilterForm.module.scss';
+import req from 'request/request';
 
-const FilterForm = ({ options }: { options: OptionType[] }) => {
+const FilterForm = () => {
+	const [options, setOptions] = useState<OptionType[]>([]);
+
+	useEffect(() => {
+		req('filter_options/', (data) => {
+			if (data.length) setOptions(data);
+		});
+	}, []);
+
 	const [showForm, setShowForm] = useState<Boolean>(false);
 	const [showDropList, setShowDropList] = useState<Boolean>(false);
 	const [params, setParams] = useSearchParams();
 	const [selectInputValue, setSelectInputValue] =
 		useState<string>('Страна и город');
-
-	console.log(params.toString());
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
@@ -81,8 +88,8 @@ const FilterForm = ({ options }: { options: OptionType[] }) => {
 					Без фильтрации по городу
 				</div>
 				{options.map((place) => (
-					<div key={place} className={s.select__listItem}>
-						{place}
+					<div key={place.country + place.city} className={s.select__listItem}>
+						{place.country + ' → ' + place.city}
 					</div>
 				))}
 			</div>

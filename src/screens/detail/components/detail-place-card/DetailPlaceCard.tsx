@@ -12,9 +12,10 @@ const DetailPlaceCard = () => {
 	const [showContacts, setShowContacts] = useState<Boolean>(false);
 
 	useEffect(() => {
-		req(`places/${params.pk}`, (data) => {
-			setPlace(data[0]);
-		});
+		if (params.pk)
+			req(params.pk, (data) => {
+				setPlace(data[0]);
+			});
 	}, []);
 
 	return place ? (
