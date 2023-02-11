@@ -61,6 +61,7 @@
 	&__listItem {
 		padding: 19px;
 		cursor: pointer;
+		transition: background-color 0.1s;
 
 		&:hover {
 			background: var(--light-gray-2);

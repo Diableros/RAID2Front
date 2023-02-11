@@ -12,7 +12,7 @@ export const requestData = (
 };
 
 export const requestOptions = (callback: (data: OptionType[]) => void) => {
-	fetch(BASE_API_URL + 'filter_options')
+	fetch(BASE_API_URL + 'filter_options/')
 		.then((res) => res.json())
 		.then((data) => {
 			callback(data);
