@@ -1,10 +1,19 @@
 import clsx from 'clsx';
-import { FormEvent, useState, useLayoutEffect } from 'react';
+import { FormEvent, useState, useLayoutEffect, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Button from 'screens/shared_components/button/Button';
 import s from './FilterForm.module.scss';
+import { requestOptions as req } from 'request/request';
 
-const FilterForm = ({ options }: { options: OptionType[] }) => {
+const FilterForm = () => {
+	const [options, setOptions] = useState<OptionType[]>([]);
+
+	useEffect(() => {
+		req((data) => {
+			if (data.length) setOptions(data);
+		});
+	}, []);
+
 	const [showForm, setShowForm] = useState<Boolean>(false);
 	const [showDropList, setShowDropList] = useState<Boolean>(false);
 	const [params, setParams] = useSearchParams();
@@ -20,11 +29,21 @@ const FilterForm = ({ options }: { options: OptionType[] }) => {
 		const priceFrom: string = form.priceFrom.value || '0';
 		const priceTo: string = form.priceTo.value || '0';
 
-		let params: [string, string][] = [];
-
-		if (!['город', 'городу'].includes(city)) params.push(['city', city]);
-		if (priceFrom !== '0') params.push(['from', priceFrom]);
-		if (priceTo !== '0') params.push(['to', priceTo]);
+		if (!['город', 'городу'].includes(city)) {
+			params.set('city', city), params.delete('page');
+		} else {
+			params.delete('city');
+		}
+		if (priceFrom !== '0') {
+			params.set('from', priceFrom);
+		} else {
+			params.delete('from');
+		}
+		if (priceTo !== '0') {
+			params.set('to', priceTo);
+		} else {
+			params.delete('to');
+		}
 
 		setParams(params);
 	};
@@ -79,8 +98,8 @@ const FilterForm = ({ options }: { options: OptionType[] }) => {
 					Без фильтрации по городу
 				</div>
 				{options.map((place) => (
-					<div key={place} className={s.select__listItem}>
-						{place}
+					<div key={place.country + place.city} className={s.select__listItem}>
+						{place.country + ' → ' + place.city}
 					</div>
 				))}
 			</div>
