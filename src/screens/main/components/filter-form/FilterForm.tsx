@@ -3,13 +3,13 @@ import { FormEvent, useState, useLayoutEffect, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Button from 'screens/shared_components/button/Button';
 import s from './FilterForm.module.scss';
-import req from 'request/request';
+import { requestOptions as req } from 'request/request';
 
 const FilterForm = () => {
 	const [options, setOptions] = useState<OptionType[]>([]);
 
 	useEffect(() => {
-		req('filter_options/', (data) => {
+		req((data) => {
 			if (data.length) setOptions(data);
 		});
 	}, []);
@@ -29,11 +29,21 @@ const FilterForm = () => {
 		const priceFrom: string = form.priceFrom.value || '0';
 		const priceTo: string = form.priceTo.value || '0';
 
-		let params: [string, string][] = [];
-
-		if (!['город', 'городу'].includes(city)) params.push(['city', city]);
-		if (priceFrom !== '0') params.push(['from', priceFrom]);
-		if (priceTo !== '0') params.push(['to', priceTo]);
+		if (!['город', 'городу'].includes(city)) {
+			params.set('city', city), params.delete('page');
+		} else {
+			params.delete('city');
+		}
+		if (priceFrom !== '0') {
+			params.set('from', priceFrom);
+		} else {
+			params.delete('from');
+		}
+		if (priceTo !== '0') {
+			params.set('to', priceTo);
+		} else {
+			params.delete('to');
+		}
 
 		setParams(params);
 	};

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import s from './DetailPlaceCard.module.scss';
-import req from 'request/request';
+import { requestData as req } from 'request/request';
 import markOn from 'img/feature_on_mark.svg';
 import markOff from 'img/feature_off_mark.svg';
 import Button from 'screens/shared_components/button/Button';
@@ -13,8 +13,8 @@ const DetailPlaceCard = () => {
 
 	useEffect(() => {
 		if (params.pk)
-			req(params.pk, (data) => {
-				setPlace(data[0]);
+			req(params.pk, (resp) => {
+				setPlace(resp.data[0]);
 			});
 	}, []);
 

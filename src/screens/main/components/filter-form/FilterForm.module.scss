@@ -45,6 +45,7 @@
 	}
 
 	&__dropList {
+		z-index: 5;
 		border: 1px solid var(--light-gray);
 		border-radius: var(--corner-radius);
 		position: absolute;

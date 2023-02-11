@@ -1,0 +1,46 @@
+.box {
+	width: 100%;
+	display: flex;
+	gap: 8px;
+
+	&Top {
+		margin: 20px 0 10px;
+		justify-content: flex-start;
+		border-bottom: 1px solid var(--light-gray);
+	}
+
+	&Bottom {
+		margin: 10px 0 20px;
+		justify-content: flex-end;
+		border-top: 1px solid var(--light-gray);
+	}
+}
+
+.btn {
+	z-index: 1;
+	width: 50px;
+	height: 30px;
+	border: 1px solid var(--light-gray);
+	text-align: center;
+	line-height: 30px;
+
+	&Top {
+		border-bottom: none;
+		margin-bottom: -1px;
+		border-radius: var(--corner-radius) var(--corner-radius) 0 0;
+
+		&Active {
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	&Bottom {
+		border-top: none;
+		margin-top: -1px;
+		border-radius: 0 0 var(--corner-radius) var(--corner-radius);
+
+		&Active {
+			border-top: 1px solid #fff;
+		}
+	}
+}

@@ -16,3 +16,10 @@ type PlaceType = {
 };
 
 type OptionType = { country: string; city: string };
+
+type PaginationType = { pages: number; page: number; totalObjects: number };
+
+type BackResponseType = {
+	data: PlaceType[] | [];
+	pagination: PaginationType;
+};
