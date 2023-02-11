@@ -17,7 +17,7 @@ const MainScreen = () => {
 
 	useLayoutEffect(() => {
 		req(params.toString(), (resp) => {
-			if (resp.data.length > 1) {
+			if (resp.data.length > 0) {
 				setPagination(resp.pagination);
 
 				setDataPlaces(resp.data);

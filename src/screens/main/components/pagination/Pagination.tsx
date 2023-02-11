@@ -22,7 +22,6 @@ const Pagination = ({
 		const button = e.target as HTMLElement;
 		params.set('page', button.innerHTML);
 		setParams(params);
-		// navigate(params + 'page=' + +button.innerHTML);
 	};
 
 	return (

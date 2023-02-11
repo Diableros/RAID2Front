@@ -5,6 +5,7 @@
 	font-weight: 500;
 	padding: 16px;
 	border-radius: var(--corner-radius);
+	transition: background-color 0.1s;
 	&:active {
 		background: #c5c2c2;
 	}

@@ -6,41 +6,54 @@
 	&Top {
 		margin: 20px 0 10px;
 		justify-content: flex-start;
+		align-items: flex-end;
 		border-bottom: 1px solid var(--light-gray);
 	}
 
 	&Bottom {
 		margin: 10px 0 20px;
 		justify-content: flex-end;
+		align-items: flex-start;
 		border-top: 1px solid var(--light-gray);
 	}
 }
 
 .btn {
-	z-index: 1;
 	width: 50px;
 	height: 30px;
 	border: 1px solid var(--light-gray);
 	text-align: center;
 	line-height: 30px;
+	background: #f6f6f6;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background: #fff;
+	}
 
 	&Top {
 		border-bottom: none;
-		margin-bottom: -1px;
+		// margin-bottom: -1px;
 		border-radius: var(--corner-radius) var(--corner-radius) 0 0;
 
 		&Active {
+			margin-bottom: -2px;
+			z-index: 1;
 			border-bottom: 1px solid #fff;
+			background: #fff;
 		}
 	}
 
 	&Bottom {
 		border-top: none;
-		margin-top: -1px;
+		// margin-top: -1px;
 		border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 
 		&Active {
+			margin-top: -2px;
+			z-index: 1;
 			border-top: 1px solid #fff;
+			background: #fff;
 		}
 	}
 }
